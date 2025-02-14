@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<meta name='viewport'
+		content='user-scalable=no, width=device-width, initial-scale=1' />
+	<meta name="google" content="notranslate" />
+	<link rel="stylesheet"
+		href="https://unpkg.com/primeflex@latest/primeflex.css" />
+	<link rel="stylesheet"
+		href="https://unpkg.com/primeflex/themes/primeone-light.css" />
+	<h:outputStylesheet name="primefaces/primefaces.css"
+		library="primefaces" />
+	<h:outputScript name="primefaces/primefaces.js" library="primefaces" />
+	<title>Inicio</title>
+</h:head>
+
+<h:body style="background-color: black">
+
+	<p:growl id="growl" showDetail="true" skipDetailIfEqualsSummary="true" />
+	<div class="p-grid p-justify-center p-align-center">
+		<div
+			style="display: flex; justify-content: center; align-items: center; height: 100%;">
+			<p:graphicImage value="/imagenes/basura.jpg" height="150" />
+		</div>
+		<h:form>
+			<p:focus context="panel" />
+			<div class="flex align-items-center justify-content-center h-17rem font-bold border-round m-2">
+				<h:panelGrid id="panel">
+				
+					<span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+					 <p:inputText 
+	                    id="txtUsername" 
+	                    value="#{formBasura.username}" 
+	                    placeholder="Username" 
+	                    style="width: 108%;"/>
+					<span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+				</h:panelGrid>
+			</div>
+			 <div class="flex align-items-center justify-content-center h-3rem font-bold border-round m-2">
+            	 <p:commandButton value="Iniciar sesión" action="#{formBasura.login}" update="growl txtUsername"/>
+        	 </div>
+        	 
+		</h:form>
+	</div>
+
+</h:body>
+</html>
