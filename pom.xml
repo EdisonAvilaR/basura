@@ -12,7 +12,7 @@
 	<artifactId>basura</artifactId>
 	<version>0.0.1</version>
 	<name>basura</name>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<description>App de sacar basura</description>
 	<url/>
 	<licenses>
@@ -71,7 +71,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>basura-app</finalName>
+		
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
